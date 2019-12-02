@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 
 import android.content.Intent;
@@ -19,14 +20,19 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        bottonRecipe = findViewById(R.id.bottonRecipe);
-        bottonRecipe.setOnClickListener(new View.OnClickListener() {
+      //  ImageButton btnrecipe = findViewById(R.id.imgrecipe);
+
+        ImageButton buttonRecipe = findViewById(R.id.buttonRecipe);
+        buttonRecipe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, RecipeSearchActivity.class);
                 startActivity(intent);
             }
         });
+
+
+
 
 //        Button recipeSearch = (Button)findViewById(R.id.recipeSearch);
 //        recipeSearch.setOnClickListener( clk -> {
